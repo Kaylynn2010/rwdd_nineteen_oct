@@ -13,10 +13,8 @@ $url = isset($_GET['url']) ? $_GET['url'] : '';
 if ($url == 'user/show') {
     // $controller = new UserController();
     // $controller->show(1); // Example user ID to display.
-} elseif ($url == 'auth') {
+} elseif ($url == 'login_register') {
     // for login
-    include '../presentation/login_register.php';
-    // for regis
     include '../presentation/login_register.php';
 } else {
     echo "404 Not Found";
