@@ -6,7 +6,6 @@ error_reporting(E_ALL);
 define('BASE_PATH', dirname(__DIR__)); // Points to /my_project
 
 include BASE_PATH . '/presentation/login_register.php';
-include BASE_PATH . '/presentation/login_register.php';
 
 // require_once BASE_PATH . '/src_backend/controllers/UserController.php';
 
