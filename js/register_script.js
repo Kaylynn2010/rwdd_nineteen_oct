@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // PUT is for updating
         // DELETE is for deleting
         // Send login request to the server
-        fetch('/rwdd_kaylynn_assignment/public_frontend/api/login.php', { // Adjust this path based on your setup
+        fetch('/rwdd_kaylynn_assignment/presentation/api/new_register.php', { // Adjust this path based on your setup
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
