@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__)); // Points to /my_project
 
-include BASE_PATH . '/presentation/new_login.php';
-include BASE_PATH . '/presentation/new_regis.php';
+include BASE_PATH . '/presentation/login_register.php';
+include BASE_PATH . '/presentation/login_register.php';
 
 // require_once BASE_PATH . '/src_backend/controllers/UserController.php';
 
@@ -18,9 +18,9 @@ if ($url == 'user/show') {
     // $controller->show(1); // Example user ID to display.
 } elseif ($url == 'auth') {
     // for login
-    include '../presentation/new_login.php';
+    include '../presentation/login_register.php';
     // for regis
-    include '../presentation/new_regis.php';
+    include '../presentation/login_register.php';
 } else {
     echo "404 Not Found";
 }
