@@ -10,6 +10,8 @@ class AuthController
 
     public function __construct()
     {
+        session_start(); // Start the session
+        
         // Initialize the database connection
         $this->db = new Database($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbname']);
     }
@@ -56,4 +58,4 @@ class AuthController
         $this->db->closeConnection();
     }
 }
-?>
+
