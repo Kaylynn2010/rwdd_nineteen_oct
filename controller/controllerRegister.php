@@ -1,7 +1,7 @@
 <?php
 // controllerR
 require_once __DIR__ . '/../configuration/databaseConfig.php'; // leave my dir alone
-require_once __DIR__ . '/../lib/dbconnRegister.php'; 
+require_once __DIR__ . '/../lib/dbRegister.php'; 
 
 class AuthController
 {
@@ -11,7 +11,7 @@ class AuthController
     public function __construct()
     {
         session_start(); // Start the session
-        
+
         // Initialize the database connection
         $this->db = new Database($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbname']);
     }
