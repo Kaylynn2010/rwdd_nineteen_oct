@@ -1,17 +1,6 @@
 <?php
-session_start();
-require 'dbconnL.php';
-
-// Assuming user authentication is successful
-$_SESSION['user_id'] = $user_id; // storing user ID
-
-if (isset($_SESSION['user_id'])) {
-    echo "User ID: " . $_SESSION['user_id'];
-    echo "Username: " . $_SESSION['username'];
-} else {
-    echo "User is not logged in.";
-}
-
+// session_start();
+require 'controllerLogin.php';
 
 ?>
 
@@ -21,7 +10,7 @@ if (isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Login</title>
-    <link rel="stylesheet" href="/rwdd_nineteen_oct/css/style.css">
+    <link rel="stylesheet" href="/rwdd_nineteen_oct/css/login_style.css">
     
     </head>
 <body>

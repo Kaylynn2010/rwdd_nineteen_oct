@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../config/configLR.php'; // leave dir alone
 require_once __DIR__ . '/../lib/dbconnL.php'; 
 
@@ -98,3 +97,13 @@ class AuthController1
         $this->db->closeConnection();
     }
 }
+
+// Assuming user authentication is successful
+// $_SESSION['user_id'] = $user_id; // storing user ID
+
+// if (isset($_SESSION['user_id'])) {
+//     echo "User ID: " . $_SESSION['user_id'];
+//     echo "Username: " . $_SESSION['username'];
+// } else {
+//     echo "User is not logged in.";
+// }
