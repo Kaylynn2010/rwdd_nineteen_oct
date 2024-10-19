@@ -1,5 +1,4 @@
 <?php
-// controllerR
 require_once __DIR__ . '/../configuration/databaseConfig.php'; // leave my dir alone
 require_once __DIR__ . '/../lib/Database.php'; 
 
