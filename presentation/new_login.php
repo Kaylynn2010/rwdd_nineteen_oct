@@ -1,9 +1,3 @@
-<?php
-// session_start();
-// require 'controllerLogin.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
