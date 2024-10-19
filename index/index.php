@@ -15,7 +15,10 @@ if ($url == 'user/show') {
     // $controller = new UserController();
     // $controller->show(1); // Example user ID to display.
 } elseif ($url == 'auth') {
-    include '../src_backend/views/auth_view.php';
+    // for login
+    include '../presentation/new_login.php';
+    // for regis
+    include '../presentation/new_register.php';
 } else {
     echo "404 Not Found";
 }
