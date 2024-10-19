@@ -18,7 +18,7 @@ body {
     background-position: center;
 }
 
-/* background: rgb(55, 0, 255); */
+
 header {
     position: fixed;
     top: 0;
@@ -30,8 +30,6 @@ header {
     align-items: center;
     z-index: 99;
 }
-
-/* click ctrl + / to comment */
 
 .logo {
     font-size: 2em;
