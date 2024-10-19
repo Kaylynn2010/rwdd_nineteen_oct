@@ -1,3 +1,20 @@
+<?php
+session_start();
+require 'dbconnL.php';
+
+// Assuming user authentication is successful
+$_SESSION['user_id'] = $user_id; // storing user ID
+
+if (isset($_SESSION['user_id'])) {
+    echo "User ID: " . $_SESSION['user_id'];
+    echo "Username: " . $_SESSION['username'];
+} else {
+    echo "User is not logged in.";
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
