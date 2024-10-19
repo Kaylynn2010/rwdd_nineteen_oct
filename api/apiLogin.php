@@ -2,7 +2,7 @@
 
 define('BASE_PATH', dirname(__DIR__)); // Points to /my_project
 
-require_once BASE_PATH . '/../controller/controllerLogin.php'; // Adjust the path as necessary
+require_once BASE_PATH . '/../controller/LoginController.php'; // Adjust the path as necessary
 
 // makes use of auth_controller that I have defined inside bckend
 $authController = new LoginController();
