@@ -5,8 +5,10 @@ error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__)); // Points to /my_project
 
+include BASE_PATH . '/presentation/new_login.php';
+include BASE_PATH . '/presentation/new_register.php';
+
 // require_once BASE_PATH . '/src_backend/controllers/UserController.php';
-// central router
 
 // Simple routing logic based on URL parameters.
 $url = isset($_GET['url']) ? $_GET['url'] : '';
