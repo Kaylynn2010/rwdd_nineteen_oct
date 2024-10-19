@@ -1,7 +1,7 @@
 <?php
 // controllerR
-require_once __DIR__ . '/../config/configLR.php'; // leave dir alone
-require_once __DIR__ . '/../lib/dbconnR.php'; 
+require_once __DIR__ . '/../configuration/databaseConfig.php'; // leave dir alone
+require_once __DIR__ . '/../lib/dbconnRegister.php'; 
 
 class AuthController1
 {
