@@ -17,7 +17,6 @@
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
 
-
         <div class="form-box register">
             <h2>Registration</h2>
             <form id="registerForm" action="#">
