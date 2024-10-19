@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 require 'controllerLogin.php';
 
 ?>
@@ -45,6 +45,7 @@ require 'controllerLogin.php';
                     <a href="#">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
+
                 <div class="login-register">
                     <p>Don't have an account?<a href="#" class="register-link"> Register!</a>
                     </p>
@@ -52,7 +53,7 @@ require 'controllerLogin.php';
             </form>
         </div>
 
-    <script src="/rwdd_kaylynn_assignment/public_frontend/js/log_script.js"></script>
+    <script src="/rwdd_nineteen_oct/js/login_script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

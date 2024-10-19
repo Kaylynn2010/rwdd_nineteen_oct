@@ -54,10 +54,10 @@
         </div>
     </div>
 
-    <script>
 
-    </script>
+    <script src="/rwdd_nineteen_oct/js/register_script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
 
-<!-- helps to render html -->
