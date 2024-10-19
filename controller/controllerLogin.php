@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../config/databaseConfig.php'; // leave dir alone
+require_once __DIR__ . '/../config/databaseConfig.php'; // leave my dir alone
 require_once __DIR__ . '/../lib/dbconnL.php'; 
 
 class AuthController1
