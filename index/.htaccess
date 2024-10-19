@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Prevent rewriting for existing files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route all other requests to index.php, passing the requested path as a query parameter
+RewriteRule ^(.*)$ index.php?url=$1 [L]
