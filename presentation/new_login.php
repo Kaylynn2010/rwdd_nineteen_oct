@@ -1,6 +1,6 @@
 <?php
-session_start();
-require 'controllerLogin.php';
+// session_start();
+// require 'controllerLogin.php';
 
 ?>
 

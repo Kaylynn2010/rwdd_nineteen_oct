@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../configuration/databaseConfig.php'; // leave my dir alone
 require_once __DIR__ . '/../lib/dbconnRegister.php'; 
 
-class AuthController1
+class AuthController
 {
 
     private $db;
