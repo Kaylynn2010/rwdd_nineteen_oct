@@ -60,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            // console.error('Error:', error);
             alert('An error occurred. Please try again later.');
+            console.log(error);
         });
     });
 });
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
         .catch (error => {
-            console.error('Error: ', error);
+            // console.error('Error: ', error);
             alert('An error occured. Please try again later.')
         });
     });
