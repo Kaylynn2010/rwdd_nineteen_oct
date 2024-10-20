@@ -35,6 +35,8 @@ class LoginController
                 $stmt->bind_result($userId, $hashedPassword);
                 $stmt->fetch();
 
+                print($hashedPassword);
+                print($password);
                 // Verify the password using password_verify for better security
                 if (password_verify($password, $hashedPassword)) {
                     // Login successful
@@ -49,7 +51,7 @@ class LoginController
                 }
             } else {
                 // User not found
-                echo json_encode(['success' => false, 'message' => 'Invalid email or password.']);
+                echo json_encode(['success' => false, 'message' => 'User not found.']);
             }
 
             $stmt->close(); // Close the statement
