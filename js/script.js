@@ -77,11 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData2.forEach((value2, key2) => {
             data2[key2] = value2;
         });
-        // GET is for getting data
-        // POST is for sending
-        // PUT is for updating
-        // DELETE is for deleting
-        // Send login request to the server
+  
         fetch('/rwdd_nineteen_oct/api/apiRegister.php', { // Adjust this path based on your setup
             method: 'POST',
             headers: {
