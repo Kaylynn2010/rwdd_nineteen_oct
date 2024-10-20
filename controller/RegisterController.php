@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../configuration/databaseConfig.php'; // leave my dir alone
-require_once __DIR__ . '/../lib/Database.php'; 
+require_once __DIR__ . '/../lib/Database.php';
 
 class RegisterController
 {
@@ -15,7 +15,7 @@ class RegisterController
         $this->db = new Database($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbname']);
     }
 
-    public function register($data) 
+    public function register($data)
     {
         header('Content-Type: application/json');
 
@@ -45,18 +45,18 @@ class RegisterController
 
             // check if email existed
             $checkEmailStmt = $this->db->getConnection()->prepare("SELECT * FROM user WHERE email = ? OR username = ?");
-            $checkEmailStmt->bind_param("s", $email); // 's' specifies the variable type => 'string'
+            $checkEmailStmt->bind_param("ss", $email, $username); // Bind both email and username
             $checkEmailStmt->execute();
             $checkEmailStmt->store_result();
 
             if ($checkEmailStmt->num_rows > 0) {
-                echo json_encode(['success' => false, 'message' => 'Email is already registered.']);
+                echo json_encode(['success' => false, 'message' => 'Email or username is already registered.']);
             } else {
                 // Hash the password for security
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                
+
                 // move to register
-                $stmt = $this->db->getConnection()->prepare("INSERT INTO user (Username, Email, Password) VALUES (?, ?, ?)");
+                $stmt = $this->db->getConnection()->prepare("INSERT INTO user (username, email, password) VALUES (?, ?, ?)");
                 $stmt->bind_param("sss", $username, $email, $hashedPassword); // 's' specifies the variable type => 'string'
 
                 if ($stmt->execute()) {
@@ -94,5 +94,5 @@ class RegisterController
 
         // Close the database connection
         $this->db->closeConnection();
-    }       
+    }
 }

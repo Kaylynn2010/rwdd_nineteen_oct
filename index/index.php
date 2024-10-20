@@ -15,8 +15,10 @@ if ($url == 'user/show') {
     // $controller->show(1); // Example user ID to display.
 } elseif ($url == 'login_register') {
     // for login
-    include '../presentation/login_register.php';
+    include BASE_PATH . '/presentation/login_register.php';
 } else {
-    echo "404 Not Found";
+    header("Location: /rwdd_nineteen_oct/index/index.php?url=login_register");
+    exit();
+    // echo "404 Not Found";
 }
 ?>

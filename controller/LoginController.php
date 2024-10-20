@@ -26,7 +26,7 @@ class LoginController
             $password = $data['password'] ?? '';
 
             // Prepare and execute the SQL query to verify user credentials
-            $stmt = $this->db->getConnection()->prepare("SELECT id, password FROM users WHERE email = ?");
+            $stmt = $this->db->getConnection()->prepare("SELECT id, password FROM user WHERE email = ?");
             $stmt->bind_param("s", $email); // 's' specifies the variable type => 'string'
             $stmt->execute();
             $stmt->store_result();
