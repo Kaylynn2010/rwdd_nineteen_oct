@@ -45,12 +45,12 @@ class RegisterController
 
             // check if email existed
             $checkEmailStmt = $this->db->getConnection()->prepare("SELECT * FROM user WHERE email = ? OR username = ?");
-            $checkEmailStmt->bind_param("s", $email); // 's' specifies the variable type => 'string'
+            $checkEmailStmt->bind_param("ss", $email, $username); // 's' specifies the variable type => 'string'
             $checkEmailStmt->execute();
             $checkEmailStmt->store_result();
 
             if ($checkEmailStmt->num_rows > 0) {
-                echo json_encode(['success' => false, 'message' => 'Email is already registered.']);
+                echo json_encode(['success' => false, 'message' => 'Email or username are already registered.']);
             } else {
                 // Hash the password for security
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);

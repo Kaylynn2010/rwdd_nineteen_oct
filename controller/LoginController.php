@@ -26,7 +26,7 @@ class LoginController
             $password = $data['password'] ?? '';
 
             // Prepare and execute the SQL query to verify user credentials
-            $stmt = $this->db->getConnection()->prepare("SELECT id, password FROM users WHERE email = ?");
+            $stmt = $this->db->getConnection()->prepare("SELECT UserID, Password FROM user WHERE Email = ?");
             $stmt->bind_param("s", $email); // 's' specifies the variable type => 'string'
             $stmt->execute();
             $stmt->store_result();
@@ -35,6 +35,8 @@ class LoginController
                 $stmt->bind_result($userId, $hashedPassword);
                 $stmt->fetch();
 
+                print($hashedPassword);
+                print($password);
                 // Verify the password using password_verify for better security
                 if (password_verify($password, $hashedPassword)) {
                     // Login successful
@@ -49,7 +51,7 @@ class LoginController
                 }
             } else {
                 // User not found
-                echo json_encode(['success' => false, 'message' => 'Invalid email or password.']);
+                echo json_encode(['success' => false, 'message' => 'User not found.']);
             }
 
             $stmt->close(); // Close the statement

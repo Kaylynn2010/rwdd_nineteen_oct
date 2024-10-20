@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.forEach((value, key) => {
             data[key] = value;
         });
+        console.log(data)
         // GET is for getting data
         // POST is for sending
         // PUT is for updating

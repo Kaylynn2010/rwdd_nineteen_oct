@@ -52,7 +52,7 @@
                     <span class="icon">
                     <ion-icon name="person"></ion-icon>
                     </span>
-                    <input type="text" required>
+                    <input type="text" name="username" required>
                     <label>Username</label>
                 </div>
                 <div class="input-box">
