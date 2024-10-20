@@ -72,10 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); //Prevent the default form submission!
 
         // Collect form data
-        const formData2 = new FormData(registerForm);
-        const data2 = {};
-        formData2.forEach((value2, key2) => {
-            data2[key2] = value2;
+        const formData = new FormData(registerForm);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
         });
   
         fetch('/rwdd_nineteen_oct/api/apiRegister.php', { // Adjust this path based on your setup
@@ -83,24 +83,24 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data2),
+            body: JSON.stringify(data),
         })
-        .then(response2 => {
-            console.log(response2); // Log the response object
-            return response2.json(); // Try to parse JSON
+        .then(response => {
+            console.log(response); // Log the response object
+            return response.json(); // Try to parse JSON
         })
-        .then(data2 => {
-            if (data2.success) {
+        .then(data => {
+            if (data.success) {
                 // Handle successful registration
                 alert('registration successful')
                 window.location.href = '/dashboard' // Adjust the URL as needed, this goes to XAMPP browser
             } else {
                 // Handle regis error
-                alert(data2.message || 'Registration failed. Please try again.');
+                alert(data.message || 'Registration failed. Please try again.');
             }
         })
-        .catch (error2 => {
-            console.error('Error: ', error2);
+        .catch (error => {
+            console.error('Error: ', error);
             alert('An error occured. Please try again later.')
         });
     });
