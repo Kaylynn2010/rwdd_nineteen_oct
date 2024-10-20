@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (data.success) {
                 // Handle successful login
                 alert("login successful")
-                window.location.href = 'mainpage.php'; // Adjust the URL as needed
+                window.location.href = '/dashboard'; // Adjust the URL as needed,rmb, mainpage.php
             } else {
                 // Handle login error
                 alert(data.message || 'Login failed. Please try again.');
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (data2.success) {
                 // Handle successful registration
                 alert('registration successful')
-                window.location.href = 'mainpage.php' // Adjust the URL as needed, this goes to XAMPP browser
+                window.location.href = '/dashboard' // Adjust the URL as needed, this goes to XAMPP browser
             } else {
                 // Handle regis error
                 alert(data2.message || 'Registration failed. Please try again.');
